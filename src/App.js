@@ -20,11 +20,11 @@ const fetchMovie=async (event)=>
   const resp =await Axios.get(
     `https://www.omdbapi.com/?s=${search}&apikey=${API_KEY}`);
     setErrorr(resp.data.Error);
-  if(resp.data.Error==undefined)
+  if(resp.data.Error===undefined)
    updateMovieList(resp.data.Search)
    
 }
-if(errorr==undefined){
+if(errorr===undefined){
 return(
   <section>  
     <div className="header">
